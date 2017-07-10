@@ -2,10 +2,24 @@
   "name": "nightwatchjs_test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "which nodemon > /dev/null && nodemon app.js || node app.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cli-highlight": "^1.1.4",
+    "cookie-session": "^2.0.0-beta.2",
+    "express": "^4.15.3",
+    "express-flash-messages": "^0.1.1",
+    "express-handlebars": "^3.0.0",
+    "jasmine": "^2.6.0",
+    "mongoose": "^4.11.1",
+    "mongooseeder": "^2.0.5",
+    "morgan": "^1.8.2",
+    "nightwatch": "^0.9.16"
+  }
 }
