@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "which nodemon > /dev/null && nodemon app.js || node app.js"
+    "start": "which nodemon > /dev/null && nodemon app.js || node app.js",
+    "selenium": "java -jar selenium-server-standalone-3.4.0.jar",
+    "nightwatch": "./node_modules/nightwatch/bin/nightwatch"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +19,7 @@
     "express-flash-messages": "^0.1.1",
     "express-handlebars": "^3.0.0",
     "jasmine": "^2.6.0",
+    "load-helpers": "^1.0.1",
     "mongoose": "^4.11.1",
     "mongooseeder": "^2.0.5",
     "morgan": "^1.8.2",

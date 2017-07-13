@@ -139,7 +139,8 @@ app.use((req, res, next) => {
 // Routes
 // ----------------------------------------
 app.get('/', (req, res) => {
-  res.send('Hi!');
+  req.flash('success', 'Welcome!');
+  res.render('users/index');
 });
 
 
@@ -148,11 +149,13 @@ app.get('/', (req, res) => {
 // Template Engine
 // ----------------------------------------
 const expressHandlebars = require('express-handlebars');
-const helpers = require('./helpers');
+const LoadHelpers = require('load-helpers');
+const helpersLoader = new LoadHelpers();
+const helpers = helpersLoader.load('helpers/*.js').cache;
 
 
 const hbs = expressHandlebars.create({
-  helpers: helpers.registered,
+  helpers: helpers,
   partialsDir: 'views/',
   defaultLayout: 'application'
 });

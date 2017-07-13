@@ -1,0 +1,19 @@
+{
+  "development": {
+    "database": "nightwatchjs_test_development",
+    "host": "localhost"
+  },
+  "test": {
+    "database": "nightwatchjs_test_test",
+    "host": "localhost"
+  },
+  "production": {
+    "use_env_variable": "MONGODB_URI"
+  }
+}
+
+
+
+
+
+
