@@ -1,4 +1,24 @@
-{
+const SAFARI = {
+  "desiredCapabilities": {
+    "browserName" : "safari",
+    "javascriptEnabled" : true,
+    "acceptSslCerts" : true
+  }
+};
+
+const FIREFOX = {
+  "browserName": "firefox",
+  "marionette": true
+};
+
+const CHROME = {
+  "desiredCapabilities": {
+    "browserName": "chrome"
+  }
+};
+
+
+module.exports = {
   "src_folders" : ["tests"],
   "output_folder" : "reports",
   "custom_commands_path" : "",
@@ -8,7 +28,7 @@
 
   "selenium" : {
     "start_process" : false,
-    "server_path" : "./selenium-server-standalone-3.4.0.jar",
+    "server_path" : "",
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
@@ -28,17 +48,12 @@
         "enabled" : false,
         "path" : ""
       },
-      "desiredCapabilities": {
-        "browserName": "firefox",
-        "marionette": true
-      }
+      "desiredCapabilities": FIREFOX
     },
 
-    "chrome" : {
-      "desiredCapabilities": {
-        "browserName": "chrome"
-      }
-    },
+    "safari" : SAFARI,
+
+    "chrome" : CHROME,
 
     "edge" : {
       "desiredCapabilities": {
@@ -46,7 +61,7 @@
       }
     }
   }
-}
+};
 
 
 

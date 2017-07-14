@@ -149,9 +149,7 @@ app.get('/', (req, res) => {
 // Template Engine
 // ----------------------------------------
 const expressHandlebars = require('express-handlebars');
-const LoadHelpers = require('load-helpers');
-const helpersLoader = new LoadHelpers();
-const helpers = helpersLoader.load('helpers/*.js').cache;
+const helpers = require('./helpers');
 
 
 const hbs = expressHandlebars.create({
