@@ -144,6 +144,16 @@ app.get('/', (req, res) => {
 });
 
 
+app.get('/users/new', (req, res) => {
+  res.render('users/new');
+});
+
+
+app.post('/users', (req, res) => {
+  res.render('users/show', { user: req.body.user });
+});
+
+
 
 // ----------------------------------------
 // Template Engine

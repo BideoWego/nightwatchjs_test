@@ -43,7 +43,7 @@ module.exports = {
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://localhost:3000",
+      "launch_url" : "http://localhost:4000",
       "selenium_port"  : 4444,
       "selenium_host"  : "localhost",
       "silent": true,

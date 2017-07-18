@@ -6,4 +6,15 @@ node_modules/
 npm-debug.log
 
 
+# ----------------------------------------
+# Nightwatch
+# ----------------------------------------
+
+reports/
+selenium-debug.log
+
+
+
+
+
 
